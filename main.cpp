@@ -33,6 +33,7 @@ void send_data(HCSR04 *sensor, int num){
     sensor_data data;
     data.ind_num = num;
     sensor->start();
+    
     while(true){
         dist = sensor->get_dist_cm();
         data.distance = dist;
